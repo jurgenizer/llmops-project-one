@@ -6,3 +6,19 @@ pip install "fastapi[all]"
 
 uvicorn main:app --reload
 ```
+
+###Test with Postman
+
+http://127.0.0.1:80/response
+
+```
+{
+    "text":"Who is the hero of the story?"
+}
+```
+
+###Docker
+```
+docker build -t chatgpt-project-one .
+docker run -d -p 8080:80 chatgpt-project-one
+```

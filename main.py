@@ -1,16 +1,15 @@
-
-from fastapi import FastAPI
+from fastapi import FastAPI 
 from openai import OpenAI
+import config
 from pydantic import BaseModel
 import uvicorn
-import config
 
 assistant_id = config.assistant_id
 api_key = config.api_key
 
 client = OpenAI(api_key=api_key)
-app = FastAPI()
 
+app = FastAPI()
 
 class Body(BaseModel):
     text: str
@@ -19,7 +18,7 @@ class Body(BaseModel):
 
 @app.get("/") 
 def welcome():
-    return {"message": "Welcome to Jurgen's ChatGPT AI Application"}
+    return {"message": "Welcome to ChatGPT AI Application"}
 
 @app.get("/home") 
 def welcome():
