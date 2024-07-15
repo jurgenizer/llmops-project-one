@@ -27,4 +27,12 @@ docker run -d -p 8080:80 chatgpt-project-one
 ```
 kubectl get pods
 kubectl apply -f pod.yaml
+kubectl describe pod myapp
+
+kubectl apply -f svc-local.yaml
+kubectl get svc
+kubectl describe svc mysvc
+
+kubectl delete pods --all
+kubectl delete svc --all
 ```
